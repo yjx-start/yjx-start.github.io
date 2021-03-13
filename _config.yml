@@ -104,7 +104,7 @@ theme: default
 deploy:
   type: git
   repository: https://github.com/yjx-start/yjx-start.github.io.git
-  branch: master
+  branch: main
 markdown:
   render:
     html: true
