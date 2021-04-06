@@ -8,30 +8,30 @@
   <meta name="renderer" content="webkit">
 
   
-  <title>Hello World | YJX的博客</title>
+  <title>[object Object] | YJX的博客</title>
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="YJX的博客" type="application/atom+xml">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="ILRuntime ILRuntime的实现原理  ILRuntime借助Mono.Cecil库来读取DLL的PE信息，以及当中类型的所有信息，最终得到方法的IL汇编码，然后通过内置的IL解译执行虚拟机来执行DLL中的代码。  ILRuntime的环境搭建   Unity版本：在2018以上版本可直接通过Package Manager安装。   VS版本：ILRuntime提供了一个支持Visua">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yjx-start.github.io/2021/03/13/hello-world/index.html">
+<meta property="og:title" content="[object Object]">
+<meta property="og:url" content="http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/index.html">
 <meta property="og:site_name" content="YJX的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="ILRuntime ILRuntime的实现原理  ILRuntime借助Mono.Cecil库来读取DLL的PE信息，以及当中类型的所有信息，最终得到方法的IL汇编码，然后通过内置的IL解译执行虚拟机来执行DLL中的代码。  ILRuntime的环境搭建   Unity版本：在2018以上版本可直接通过Package Manager安装。   VS版本：ILRuntime提供了一个支持Visua">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-13T09:34:16.786Z">
-<meta property="article:modified_time" content="2021-03-13T09:34:16.786Z">
+<meta property="article:published_time" content="2021-04-02T12:34:16.887Z">
+<meta property="article:modified_time" content="2021-04-06T10:53:28.095Z">
 <meta property="article:author" content="YJX">
-<meta property="article:tag" content="YJX,博客">
+<meta property="article:tag" content="ILRuntime">
 <meta name="twitter:card" content="summary">
 
-  <meta name="keywords" content="">
+  <meta name="keywords" content=",ILRuntime">
   <meta name="format-detection" content="telephone=no,email=no">
   <meta name="theme-color" content="#9C27B0">
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="YJX的博客">
-  <meta name="msapplication-starturl" content="http://yjx-start.github.io/2021/03/13/hello-world/">
+  <meta name="msapplication-starturl" content="http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/">
   <meta name="msapplication-navbutton-color" content="#9C27B0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="YJX的博客">
@@ -39,7 +39,7 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
 
   
-    <link rel="canonical" href="http://yjx-start.github.io/2021/03/13/hello-world/">
+    <link rel="canonical" href="http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/">
   
 
   
@@ -180,11 +180,11 @@
   <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-12.png" style="max-height: 240px;">
+      <img src="/images/random/material-13.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
-          <div class="mdui-card-primary-title">Hello World</div>
-          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2021-03-13 / <i class="iconfont">&#xe601;</i> YJX</div>
+          <div class="mdui-card-primary-title">[object Object]</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2021-04-02 / <i class="iconfont">&#xe601;</i> YJX</div>
         </div>
       </div>
       <div class="mdui-card-menu">
@@ -196,7 +196,7 @@
             
             <li class="mdui-menu-item" disabled>
               
-                <img src="http://qr.liantu.com/api.php?w=246&m=10&text=http://yjx-start.github.io/2021/03/13/hello-world/">
+                <img src="http://qr.liantu.com/api.php?w=246&m=10&text=http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/">
               
             </li>
           </ul>
@@ -205,45 +205,111 @@
           <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
           <ul class="mdui-menu" id="share_menu">
             <li class="mdui-menu-item">
-              <a href="http://service.weibo.com/share/share.php?appkey=&title=Hello World&url=http://yjx-start.github.io/2021/03/13/hello-world/&pic=http://yjx-start.github.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+              <a href="http://service.weibo.com/share/share.php?appkey=&title=[object Object]&url=http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/&pic=http://yjx-start.github.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://twitter.com/intent/tweet?text=Hello World&url=http://yjx-start.github.io/2021/03/13/hello-world/&via=YJX" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+              <a href="https://twitter.com/intent/tweet?text=[object Object]&url=http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/&via=YJX" target="_blank" class="mdui-ripple">分享到 Twitter</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=http://yjx-start.github.io/2021/03/13/hello-world/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://plus.google.com/share?url=http://yjx-start.github.io/2021/03/13/hello-world/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+              <a href="https://plus.google.com/share?url=http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/" target="_blank" class="mdui-ripple">分享到 Google+</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yjx-start.github.io/2021/03/13/hello-world/&title=Hello World" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/&title=[object Object]" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="http://connect.qq.com/widget/shareqq/index.html?site=YJX的博客&title=Hello World&pics=http://yjx-start.github.io/images/favicon.png&url=http://yjx-start.github.io/2021/03/13/hello-world/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+              <a href="http://connect.qq.com/widget/shareqq/index.html?site=YJX的博客&title=[object Object]&pics=http://yjx-start.github.io/images/favicon.png&url=http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/" target="_blank" class="mdui-ripple">分享到 QQ</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://telegram.me/share/url?url=http://yjx-start.github.io/2021/03/13/hello-world/&text=Hello World" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+              <a href="https://telegram.me/share/url?url=http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/&text=[object Object]" target="_blank" class="mdui-ripple">分享到 Telegram</a>
             </li>
           </ul>
         
       </div>
     </header>
     <div class="mdui-card-content mdui-typo">
-      <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick Start">Quick Start<a class="header-anchor" href="#Quick Start" aria-hidden="true"></a></h2>
-<h3 id="Create a new post">Create a new post<a class="header-anchor" href="#Create a new post" aria-hidden="true"></a></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run server">Run server<a class="header-anchor" href="#Run server" aria-hidden="true"></a></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate static files">Generate static files<a class="header-anchor" href="#Generate static files" aria-hidden="true"></a></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy to remote sites">Deploy to remote sites<a class="header-anchor" href="#Deploy to remote sites" aria-hidden="true"></a></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+      <h1 id="ILRuntime"><a target="_blank" rel="noopener" href="http://ourpalm.github.io/ILRuntime/public/v1/guide/index.html">ILRuntime</a><a class="header-anchor" href="#ILRuntime" aria-hidden="true"></a></h1>
+<h3 id="ILRuntime的实现原理"><a target="_blank" rel="noopener" href="http://ourpalm.github.io/ILRuntime/public/v1/guide/principle.html">ILRuntime的实现原理</a><a class="header-anchor" href="#ILRuntime的实现原理" aria-hidden="true"></a></h3>
+<ul>
+<li><strong>ILRuntime借助Mono.Cecil库来读取DLL的PE信息，以及当中类型的所有信息，最终得到方法的IL汇编码，然后通过内置的IL解译执行虚拟机来执行DLL中的代码。</strong></li>
+</ul>
+<h3 id="ILRuntime的环境搭建"><a target="_blank" rel="noopener" href="http://ourpalm.github.io/ILRuntime/public/v1/guide/tutorial.html">ILRuntime的环境搭建</a><a class="header-anchor" href="#ILRuntime的环境搭建" aria-hidden="true"></a></h3>
+<ul>
+<li>
+<p><strong>Unity版本</strong>：在2018以上版本可直接通过Package Manager安装。</p>
+</li>
+<li>
+<p><strong>VS版本</strong>：ILRuntime提供了一个支持Visual Studio 2015、Visual Studio 2017和Visual Studio 2019的<a target="_blank" rel="noopener" href="https://github.com/Ourpalm/ILRuntime/releases">调试插件</a>，用来源码级调试你的热更脚本。</p>
+</li>
+<li>
+<p><strong>Unity环境</strong>：由于ILRuntime使用了unsafe代码来优化执行效率，所以你需要在Unity中开启unsafe模式。(以2019.4.13为例：File=&gt;PlayerSettings=&gt;OtherSettings\Allow’unsafe’Code(勾选))</p>
+</li>
+</ul>
+<h3 id="[ILRuntimeU3D示例工程]">[ILRuntimeU3D示例工程]<a class="header-anchor" href="#[ILRuntimeU3D示例工程]" aria-hidden="true"></a></h3>
+<ul>
+<li><strong>获取途径</strong>：
+<ul>
+<li>通过<a href="(https://github.com/Ourpalm/ILRuntimeU3D)">GitHubILRuntimeU3D示例工程链接</a>下载使用Untiy 打开。</li>
+<li>在Unity引擎中 Package Manager 获取ILRuntime在介绍信息中将Demo导入（推荐）</li>
+</ul>
+</li>
+<li><strong>运行示例工程</strong><br>
+ILRuntimeU3D示例工程中通过读取StreamingAssets文件夹下的<strong>HotFix_Project.dll</strong>、<strong>HotFix_Project.pdb</strong>，两个文件来模拟热更。但示例工程Asset下没有StreamingAssets文件夹以及用到的文件，需要进行以下操作：
+<ul>
+<li>在资源管理器中打开ILRuntime中Demo文件夹在文件夹中可以看到  <strong>HotFix_Project~</strong> 文件夹(文件夹为示例工程中dll的VS工程)，运行并生成文件夹中的VS工程解决方案。</li>
+<li>刷新ILRuntimeU3D示例工程Asset，会生成StreamingAssets文件夹以及<strong>HotFix_Project.dll</strong>、<strong>HotFix_Project.pdb</strong>文件。</li>
+<li>选择示例场景即可正常运行ILRuntimeU3D示例工程。</li>
+</ul>
+</li>
+<li><strong>更改示例工程热更代码</strong>
+<ul>
+<li>在<strong>HotFix_Project</strong>VS工程修改完毕想要的逻辑后。生成解决方案即可自行覆盖原dll。</li>
+</ul>
+</li>
+</ul>
+<h3 id="ILRuntime功能实现 （持续更新）">ILRuntime功能实现 （持续更新）<a class="header-anchor" href="#ILRuntime功能实现 （持续更新）" aria-hidden="true"></a></h3>
+<ul>
+<li>
+<p><strong>在官方Demo中各个场景对应的脚本都有详细的注释演示。此部分建议看官方Demo，未在项目中使用，暂时根据官方Demo的方法运行一遍，后期特殊运用持续更新</strong></p>
+<ul>
+<li><strong>ILRuntimeDemo中脚本用法相对详细。</strong>
+<ul>
+<li>
+<p><strong>AppDomain</strong>：AppDomain是ILRuntime的入口</p>
+ <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//AppDomain是ILRuntime的入口，最好是在一个单例类中保存，整个游戏全局就一个</span></span><br><span class="line"><span class="comment">//首先实例化ILRuntime的AppDomain，AppDomain是一个应用程序域，每个AppDomain都是一个独立的沙盒</span></span><br><span class="line">AppDomain appdomain = <span class="keyword">new</span> ILRuntime.Runtime.Enviorment.AppDomain();</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>读取加载dll</strong>：将Dll 与 PDB文件 转换为Byte[] 然后appdomain进行加载读取。</p>
+ <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">System.IO.MemoryStream fs;</span><br><span class="line">System.IO.MemoryStream p;</span><br><span class="line"><span class="built_in">byte</span>[] dll;</span><br><span class="line"><span class="built_in">byte</span>[] pdb;</span><br><span class="line">fs = <span class="keyword">new</span> MemoryStream(dll);</span><br><span class="line">p = <span class="keyword">new</span> MemoryStream(pdb);</span><br><span class="line">appdomain.LoadAssembly(fs, p, <span class="keyword">new</span> ILRuntime.Mono.Cecil.Pdb.PdbReaderProvider());</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>调用dll中方法</strong>：在官方Demo中各个场景对应的脚本都有详细的注释演示。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="记录疑问解答（持续更新）">记录疑问解答（持续更新）<a class="header-anchor" href="#记录疑问解答（持续更新）" aria-hidden="true"></a></h3>
+<ul>
+<li><strong>官方常见问题解答</strong>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://ourpalm.github.io/ILRuntime/public/v1/guide/FastQA.html">我要怎么才能在Profiler里看见热更内的方法耗时情况呢？</a></li>
+<li><a target="_blank" rel="noopener" href="http://ourpalm.github.io/ILRuntime/public/v1/guide/FastQA.html">运行出现报错ObjectDisposedException: Cannot access a closed Stream</a></li>
+<li><a target="_blank" rel="noopener" href="http://ourpalm.github.io/ILRuntime/public/v1/guide/FastQA.html">用mono打包的时候，ILRuntime相关的功能都正常，改用IL2Cpp之后，注册的所有委托都不执行了？</a></li>
+<li><a target="_blank" rel="noopener" href="http://ourpalm.github.io/ILRuntime/public/v1/guide/FastQA.html">真机上调试或运行时出现随机闪退</a></li>
+<li><a target="_blank" rel="noopener" href="http://ourpalm.github.io/ILRuntime/public/v1/guide/FastQA.html">使用ILRuntime后产生的GC Alloc比用之前大和很多啊，为什么</a></li>
+<li><a target="_blank" rel="noopener" href="http://ourpalm.github.io/ILRuntime/public/v1/guide/FastQA.html">使用ILRunitme后某个方法调用比之前慢了很多啊</a></li>
+</ul>
+</li>
+<li><strong>PDB文件功能</strong>：
+<ul>
+<li>PDB文件是调试数据库，如需要<strong>在日志中显示报错的行号</strong>，则必须提供PDB文件，不过由于会额外耗用内存，正式发布时请将PDB去掉。</li>
+</ul>
+</li>
+</ul>
 <link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.6.0/katex.min.css">
       
         <div class="mdui-m-y-2 mdui-text-center">
@@ -252,11 +318,13 @@
       
       <blockquote>
         
-        <strong>本文链接：</strong><br><a href="http://yjx-start.github.io/2021/03/13/hello-world/">http://yjx-start.github.io/2021/03/13/hello-world/</a>
+        <strong>本文链接：</strong><br><a href="http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/">http://yjx-start.github.io/2021/04/02/ilruntime-ji-zhu-wen-dang/</a>
       </blockquote>
     </div>
     <footer class="mdui-card-actions">
       
+      
+        <a class="mdui-ripple article_tags-link" href="/tags/ILRuntime/" rel="tag">ILRuntime</a>
       
     </footer>
     
@@ -294,12 +362,17 @@
 
   <nav id="paginator">
     
-      <a rel="prev" class="extend prev" href="/2021/03/13/test/">
+      <a rel="prev" class="extend prev" href="/2021/04/02/hololens2-mo-xing-meng-pi-quan-chong-yi-chang-wen-ti/">
         <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
-        <span class="mdui-p-x-3" mdui-tooltip="{content: '[object Object]'}">上一篇</span>
+        <span class="mdui-p-x-3" mdui-tooltip="{content: 'Hololens2模型皮肤权重异常问题'}">上一篇</span>
       </a>
     
     <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2021/04/02/epplus/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: 'EPPlus'}">下一篇</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
     
   </nav>
 

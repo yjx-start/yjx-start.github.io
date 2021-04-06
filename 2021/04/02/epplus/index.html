@@ -8,30 +8,40 @@
   <meta name="renderer" content="webkit">
 
   
-  <title>Hello World | YJX的博客</title>
+  <title>EPPlus | YJX的博客</title>
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="YJX的博客" type="application/atom+xml">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="#EPPlus的写入Excel功能简单运用和Build运行错误的解决方法 ###EPPlus 是使用Open Office XML格式（xlsx）读写Excel 2007 &#x2F; 2010文件的.net开发库。 ###官网文档：https:&#x2F;&#x2F;github.com&#x2F;JanKallman&#x2F;EPPlus ###EPPlus.dll下载地址：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;13Pn3zSLD">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yjx-start.github.io/2021/03/13/hello-world/index.html">
+<meta property="og:title" content="EPPlus">
+<meta property="og:url" content="http://yjx-start.github.io/2021/04/02/epplus/index.html">
 <meta property="og:site_name" content="YJX的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="#EPPlus的写入Excel功能简单运用和Build运行错误的解决方法 ###EPPlus 是使用Open Office XML格式（xlsx）读写Excel 2007 &#x2F; 2010文件的.net开发库。 ###官网文档：https:&#x2F;&#x2F;github.com&#x2F;JanKallman&#x2F;EPPlus ###EPPlus.dll下载地址：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;13Pn3zSLD">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-13T09:34:16.786Z">
-<meta property="article:modified_time" content="2021-03-13T09:34:16.786Z">
+<meta property="og:image" content="http://yjx-start.github.io/.io//%E5%AF%BC%E5%85%A5.png">
+<meta property="og:image" content="http://yjx-start.github.io/.io//%E5%BC%95%E7%94%A8.png">
+<meta property="og:image" content="http://yjx-start.github.io/.io//%E6%96%B9%E6%B3%95.png">
+<meta property="og:image" content="http://yjx-start.github.io/.io//%E5%AF%BC%E5%87%BA.png">
+<meta property="og:image" content="http://yjx-start.github.io/.io//%E6%95%88%E6%9E%9C.png">
+<meta property="og:image" content="http://yjx-start.github.io/.io//%E6%8A%A5%E9%94%99.png">
+<meta property="og:image" content="http://yjx-start.github.io/.io//%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="http://yjx-start.github.io/.io//%E6%96%87%E4%BB%B61.png">
+<meta property="og:image" content="http://yjx-start.github.io/.io//%E6%96%87%E4%BB%B62.png">
+<meta property="article:published_time" content="2021-04-02T12:30:39.935Z">
+<meta property="article:modified_time" content="2021-04-06T11:09:41.804Z">
 <meta property="article:author" content="YJX">
-<meta property="article:tag" content="YJX,博客">
+<meta property="article:tag" content="Unity Plugins">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yjx-start.github.io/.io//%E5%AF%BC%E5%85%A5.png">
 
-  <meta name="keywords" content="">
+  <meta name="keywords" content=",Unity Plugins">
   <meta name="format-detection" content="telephone=no,email=no">
   <meta name="theme-color" content="#9C27B0">
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="YJX的博客">
-  <meta name="msapplication-starturl" content="http://yjx-start.github.io/2021/03/13/hello-world/">
+  <meta name="msapplication-starturl" content="http://yjx-start.github.io/2021/04/02/epplus/">
   <meta name="msapplication-navbutton-color" content="#9C27B0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="YJX的博客">
@@ -39,7 +49,7 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
 
   
-    <link rel="canonical" href="http://yjx-start.github.io/2021/03/13/hello-world/">
+    <link rel="canonical" href="http://yjx-start.github.io/2021/04/02/epplus/">
   
 
   
@@ -180,11 +190,11 @@
   <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-12.png" style="max-height: 240px;">
+      <img src="/images/random/material-13.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
-          <div class="mdui-card-primary-title">Hello World</div>
-          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2021-03-13 / <i class="iconfont">&#xe601;</i> YJX</div>
+          <div class="mdui-card-primary-title">EPPlus</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2021-04-02 / <i class="iconfont">&#xe601;</i> YJX</div>
         </div>
       </div>
       <div class="mdui-card-menu">
@@ -196,7 +206,7 @@
             
             <li class="mdui-menu-item" disabled>
               
-                <img src="http://qr.liantu.com/api.php?w=246&m=10&text=http://yjx-start.github.io/2021/03/13/hello-world/">
+                <img src="http://qr.liantu.com/api.php?w=246&m=10&text=http://yjx-start.github.io/2021/04/02/epplus/">
               
             </li>
           </ul>
@@ -205,45 +215,62 @@
           <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
           <ul class="mdui-menu" id="share_menu">
             <li class="mdui-menu-item">
-              <a href="http://service.weibo.com/share/share.php?appkey=&title=Hello World&url=http://yjx-start.github.io/2021/03/13/hello-world/&pic=http://yjx-start.github.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+              <a href="http://service.weibo.com/share/share.php?appkey=&title=EPPlus&url=http://yjx-start.github.io/2021/04/02/epplus/&pic=http://yjx-start.github.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://twitter.com/intent/tweet?text=Hello World&url=http://yjx-start.github.io/2021/03/13/hello-world/&via=YJX" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+              <a href="https://twitter.com/intent/tweet?text=EPPlus&url=http://yjx-start.github.io/2021/04/02/epplus/&via=YJX" target="_blank" class="mdui-ripple">分享到 Twitter</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=http://yjx-start.github.io/2021/03/13/hello-world/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://yjx-start.github.io/2021/04/02/epplus/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://plus.google.com/share?url=http://yjx-start.github.io/2021/03/13/hello-world/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+              <a href="https://plus.google.com/share?url=http://yjx-start.github.io/2021/04/02/epplus/" target="_blank" class="mdui-ripple">分享到 Google+</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yjx-start.github.io/2021/03/13/hello-world/&title=Hello World" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yjx-start.github.io/2021/04/02/epplus/&title=EPPlus" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="http://connect.qq.com/widget/shareqq/index.html?site=YJX的博客&title=Hello World&pics=http://yjx-start.github.io/images/favicon.png&url=http://yjx-start.github.io/2021/03/13/hello-world/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+              <a href="http://connect.qq.com/widget/shareqq/index.html?site=YJX的博客&title=EPPlus&pics=http://yjx-start.github.io/images/favicon.png&url=http://yjx-start.github.io/2021/04/02/epplus/" target="_blank" class="mdui-ripple">分享到 QQ</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://telegram.me/share/url?url=http://yjx-start.github.io/2021/03/13/hello-world/&text=Hello World" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+              <a href="https://telegram.me/share/url?url=http://yjx-start.github.io/2021/04/02/epplus/&text=EPPlus" target="_blank" class="mdui-ripple">分享到 Telegram</a>
             </li>
           </ul>
         
       </div>
     </header>
     <div class="mdui-card-content mdui-typo">
-      <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick Start">Quick Start<a class="header-anchor" href="#Quick Start" aria-hidden="true"></a></h2>
-<h3 id="Create a new post">Create a new post<a class="header-anchor" href="#Create a new post" aria-hidden="true"></a></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run server">Run server<a class="header-anchor" href="#Run server" aria-hidden="true"></a></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate static files">Generate static files<a class="header-anchor" href="#Generate static files" aria-hidden="true"></a></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy to remote sites">Deploy to remote sites<a class="header-anchor" href="#Deploy to remote sites" aria-hidden="true"></a></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+      <h2 id="#EPPlus的写入Excel功能简单运用和Build运行错误的解决方法###EPPlus 是使用Open Office XML格式（xlsx）读写Excel 2007 / 2010文件的.net开发库。###官网文档：https://github.com/JanKallman/EPPlus###EPPlus.dll下载地址：https://pan.baidu.com/s/13Pn3zSLDL-kgVgUnn4ZUPA###本案例使用unity版本：unity2018.3.2f1###编程工具：VS2017">#EPPlus的写入Excel功能简单运用和Build运行错误的解决方法<br>
+###EPPlus 是使用Open Office XML格式（xlsx）读写Excel 2007 / 2010文件的.net开发库。<br>
+###官网文档：<a target="_blank" rel="noopener" href="https://github.com/JanKallman/EPPlus">https://github.com/JanKallman/EPPlus</a><br>
+###EPPlus.dll下载地址：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/13Pn3zSLDL-kgVgUnn4ZUPA">https://pan.baidu.com/s/13Pn3zSLDL-kgVgUnn4ZUPA</a><br>
+###本案例使用unity版本：unity2018.3.2f1<br>
+###编程工具：VS2017<a class="header-anchor" href="##EPPlus的写入Excel功能简单运用和Build运行错误的解决方法###EPPlus 是使用Open Office XML格式（xlsx）读写Excel 2007 / 2010文件的.net开发库。###官网文档：https://github.com/JanKallman/EPPlus###EPPlus.dll下载地址：https://pan.baidu.com/s/13Pn3zSLDL-kgVgUnn4ZUPA###本案例使用unity版本：unity2018.3.2f1###编程工具：VS2017" aria-hidden="true"></a></h2>
+<p>#####插件导入Plugins文件夹中<br>
+<img src="/.io//%E5%AF%BC%E5%85%A5.png" alt><br>
+#####在脚本中引用</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> OfficeOpenXml;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br></pre></td></tr></table></figure>
+<p><img src="/.io//%E5%BC%95%E7%94%A8.png" alt><br>
+#####创建及写入EXCEL的方法<br>
+<img src="/.io//%E6%96%B9%E6%B3%95.png" alt><br>
+此方法在需要是位置调用即可 方法中<br>
+<strong>outPutDir</strong>是生成文件的路径可以根据需求改变（本例中在D盘根目录创建了名为FileName的xlsx文件）。<br>
+<strong>hitinfo</strong> 变量是 Text 便于查看状态</p>
+<p><img src="/.io//%E5%AF%BC%E5%87%BA.png" alt><br>
+<img src="/.io//%E6%95%88%E6%9E%9C.png" alt><br>
+<strong>本例并未对Excel表格进行更深入的设置，如有需要可自行百度。</strong></p>
+<p>##Build后运行出错<br>
+####本案例在Unity打包后出现错误：导出的exe可正常打开但是在保存写入的数据时发生错误，以下是项目日志：<br>
+<img src="/.io//%E6%8A%A5%E9%94%99.png" alt><br>
+可以看出是无法找到名为 <strong>437</strong>的编码数据，导致保存文件时发生了错误。2017版本日志说法不同：<strong>ArgumentException: Encoding name ‘IBM437’ not supported。</strong> 都是<strong>437</strong> 数据的错误。<br>
+在网上搜索后发现很多都是这样的情况，以下给出解决以上问题的方法：<br>
+<strong>1、打包时  选net2.0 而不是它的子集subset   我再2018下选subset没办法成功打包  会报错</strong><br>
+<img src="/.io//%E9%85%8D%E7%BD%AE.png" alt><br>
+<strong>2、成功打包以后  在调用dll时若报错“Encoding name ‘IBM437’ not supported”  从Unity安装路径下找到Unity\Editor\Data\Mono\lib\mono\unity这个文件夹中  找到所有的I18N.dll   大概五六个吧    全部复制到项目的Assets文件夹里   复制完毕后 再重新打包</strong><br>
+<img src="/.io//%E6%96%87%E4%BB%B61.png" alt><br>
+<img src="/.io//%E6%96%87%E4%BB%B62.png" alt><br>
+<strong>以上两部操作后 Unity导出的EXE运行后也可以进行保存实现预想功能。</strong><br>
+###Ps:解决方法仅供参考。</p>
 <link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.6.0/katex.min.css">
       
         <div class="mdui-m-y-2 mdui-text-center">
@@ -252,11 +279,13 @@
       
       <blockquote>
         
-        <strong>本文链接：</strong><br><a href="http://yjx-start.github.io/2021/03/13/hello-world/">http://yjx-start.github.io/2021/03/13/hello-world/</a>
+        <strong>本文链接：</strong><br><a href="http://yjx-start.github.io/2021/04/02/epplus/">http://yjx-start.github.io/2021/04/02/epplus/</a>
       </blockquote>
     </div>
     <footer class="mdui-card-actions">
       
+      
+        <a class="mdui-ripple article_tags-link" href="/tags/Unity-Plugins/" rel="tag">Unity Plugins</a>
       
     </footer>
     
@@ -294,12 +323,17 @@
 
   <nav id="paginator">
     
-      <a rel="prev" class="extend prev" href="/2021/03/13/test/">
+      <a rel="prev" class="extend prev" href="/2021/04/02/ilruntime-ji-zhu-wen-dang/">
         <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
         <span class="mdui-p-x-3" mdui-tooltip="{content: '[object Object]'}">上一篇</span>
       </a>
     
     <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2021/03/13/test/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '[object Object]'}">下一篇</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
     
   </nav>
 
