@@ -12,15 +12,15 @@
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="YJX的博客" type="application/atom+xml">
-  <meta name="description" content="使用 hexo-asset-image 插件 安装 1npm install hexo-asset-image --save 文件结构： md文件同级目录下（sourece&#x2F;_posts）创建同md文件名称的图片文件夹，在文档中图片地址为图片名称加后缀无需添加文件夹路径。 配置： 确保 _config.yml 中 post_asset_folder: true.">
+  <meta name="description" content="使用  hexo-asset-image 插件在基于Hexo框架编译md文档中添加图片 安装 1npm install hexo-asset-image --save 文件结构： md文件同级目录下（sourece&#x2F;_posts）创建同md文件名称的图片文件夹 12345blogs├── apppicker.jpg├── logo.jpg└── rules.jpgblogs.md 在文档中图片地址">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yjx-start.github.io/2021/04/06/shi-yong-hexo-cha-jian-xie-md-wen-dang-zhong-yin-yong-tu-pian/index.html">
 <meta property="og:site_name" content="YJX的博客">
-<meta property="og:description" content="使用 hexo-asset-image 插件 安装 1npm install hexo-asset-image --save 文件结构： md文件同级目录下（sourece&#x2F;_posts）创建同md文件名称的图片文件夹，在文档中图片地址为图片名称加后缀无需添加文件夹路径。 配置： 确保 _config.yml 中 post_asset_folder: true.">
+<meta property="og:description" content="使用  hexo-asset-image 插件在基于Hexo框架编译md文档中添加图片 安装 1npm install hexo-asset-image --save 文件结构： md文件同级目录下（sourece&#x2F;_posts）创建同md文件名称的图片文件夹 12345blogs├── apppicker.jpg├── logo.jpg└── rules.jpgblogs.md 在文档中图片地址">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-06T09:36:24.845Z">
-<meta property="article:modified_time" content="2021-04-07T03:21:56.296Z">
+<meta property="article:modified_time" content="2021-04-07T03:51:19.152Z">
 <meta property="article:author" content="YJX">
 <meta property="article:tag" content="Hexo Plugins">
 <meta name="twitter:card" content="summary">
@@ -180,7 +180,7 @@
   <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-11.png" style="max-height: 240px;">
+      <img src="/images/random/material-17.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">Hexo</div>
@@ -230,13 +230,23 @@
       </div>
     </header>
     <div class="mdui-card-content mdui-typo">
-      <p>使用 hexo-asset-image 插件</p>
-<p>安装</p>
+      <h2 id="使用  hexo-asset-image 插件在基于Hexo框架编译md文档中添加图片">使用  <a target="_blank" rel="noopener" href="https://github.com/xcodebuild/hexo-asset-image">hexo-asset-image</a> 插件在基于Hexo框架编译md文档中添加图片<a class="header-anchor" href="#使用  hexo-asset-image 插件在基于Hexo框架编译md文档中添加图片" aria-hidden="true"></a></h2>
+<h3 id="安装">安装<a class="header-anchor" href="#安装" aria-hidden="true"></a></h3>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-<p>文件结构：<br>
-md文件同级目录下（sourece/_posts）创建同md文件名称的图片文件夹，在文档中图片地址为图片名称加后缀无需添加文件夹路径。</p>
-<p>配置：</p>
-<p>确保 _config.yml 中 post_asset_folder: true.</p>
+<h3 id="文件结构：">文件结构：<a class="header-anchor" href="#文件结构：" aria-hidden="true"></a></h3>
+<p>md文件同级目录下（sourece/_posts）创建同md文件名称的图片文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">blogs</span><br><span class="line">├── apppicker.jpg</span><br><span class="line">├── logo.jpg</span><br><span class="line">└── rules.jpg</span><br><span class="line">blogs.md</span><br></pre></td></tr></table></figure>
+<p>在文档中图片地址为图片名称加后缀无需添加文件夹路径。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](logo.jpg)</span><br></pre></td></tr></table></figure>
+<h3 id="配置：">配置：<a class="header-anchor" href="#配置：" aria-hidden="true"></a></h3>
+<p>确保 _config.yml 中 <code>post_asset_folder: true</code></p>
+<h3 id="问题：">问题：<a class="header-anchor" href="#问题：" aria-hidden="true"></a></h3>
+<p>正确配置之后文档中配置的图片无法正常显示,通过查看未加载图片连接发现 图片地址改变。</p>
+<p><strong>域名是xxx.io的情况下，图片路径会从原本/xxx.jpg变成 /.io/xxx.jpg</strong></p>
+<h3 id="解决：">解决：<a class="header-anchor" href="#解决：" aria-hidden="true"></a></h3>
+<p>通过 npm 安装的包出现 以上情况，因为插件已经修复但npm包并未更新。通过配置插件中的 <strong>index.js</strong>可以解决以上问题。</p>
+<p>将 <strong>hexo-asset-image/index.js</strong> 文件中 24 行 修改为<code>var endPos = link.length-1;</code>即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo-asset-image&#x2F;index.js</span><br><span class="line"></span><br><span class="line">Line 24 in 3c114cf</span><br><span class="line"></span><br><span class="line"> var endPos &#x3D; link.length-1; </span><br></pre></td></tr></table></figure>
 <link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.6.0/katex.min.css">
       
         <div class="mdui-m-y-2 mdui-text-center">
