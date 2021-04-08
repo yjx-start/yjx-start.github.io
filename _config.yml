@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Home
+title: YJX的博客
 subtitle: ''
-description: ''
-keywords:
+description: 随笔、日志、技术分享、个人作品
+keywords: YJX,博客
 author: YJX
-language: en
-timezone: ''
+language: zh-CN
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://yjx-start.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -30,6 +30,11 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
+# https://github.com/viko16/hexo-permalink-pinyin
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
+
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -40,7 +45,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -100,11 +105,14 @@ ignore:
 theme: default
 
 # Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
+## Docs: https://github.com/yjx-start/yjx-start.github.io.git
 deploy:
   type: git
-  repository: https://github.com/yjx-start/yjx-start.github.io.git
+  repository: git@github.com:yjx-start/yjx-start.github.io.git
   branch: main
+
+# Markdown
+## Docs: https://github.com/niemingzhao/hexo-renderer-markdown#readme
 markdown:
   render:
     html: true
@@ -116,11 +124,12 @@ markdown:
   plugins:
     markdown-it-anchor:
       level: 1
-      slugify: function (s) {return encodeURIComponent(s);} # String starting with 'function' will be parsed as a function that satisfies the plugin
       permalink: true
+      renderPermalink: function (b,c,d,a){var f;var e=[Object.assign(new d.Token("link_open","a",1),{attrs:[["class",c.permalinkClass],["href",c.permalinkHref(b,d)],["aria-hidden",true]]}),new d.Token("link_close","a",-1)];(f=d.tokens[a+1].children)["push"].apply(f,e)}
       permalinkClass: header-anchor
-      permalinkSymbol: ¶
-      permalinkBefore: true
+      permalinkSpace: false
+      permalinkSymbol: ""
+      permalinkBefore: false
     markdown-it-checkbox:
       divWrap: false
       divClass: checkbox
@@ -128,4 +137,5 @@ markdown:
     markdown-it-katex:
       throwOnError: false
       errorColor: "#cc0000"
-      csslink: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css # KaTeX plugin needs the CSS file link
+      csslink: https://cdn.bootcss.com/KaTeX/0.6.0/katex.min.css
+
