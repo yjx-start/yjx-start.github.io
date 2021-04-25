@@ -8,18 +8,18 @@
   <meta name="renderer" content="webkit">
 
   
-  <title>EPPlus插件 | YJX的博客</title>
+  <title>Unity打包文件合并 | YJX的博客</title>
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="YJX的博客" type="application/atom+xml">
-  <meta name="description" content="EPPlus的写入Excel功能简单运用和Build运行错误的解决方法 EPPlus 是使用Open Office XML格式（xlsx）读写Excel 2007 &#x2F; 2010文件的.net开发库。 官网文档：https:&#x2F;&#x2F;github.com&#x2F;JanKallman&#x2F;EPPlus EPPlus.dll下载地址：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;13Pn3zSLDL-kgVgUnn4">
+  <meta name="description" content="Unity2018版本打包文件合并 Unity2018打包后文件一大堆，相对于以前打包后的两个文件来说，现在的打包文件不方便管理。在查找2018打包文件都有什么作用的时候发现一篇可以美化打包文件的文章，在这里给大家分享一下。（当然也可以用于其他版本的Build文件）。  这是使用Unity2018.3.2f1打包出来的项目：  在脚本中引用 12using OfficeOpenXml;using">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EPPlus插件">
+<meta property="og:title" content="Unity打包文件合并">
 <meta property="og:url" content="http://yjx-start.github.io/2021/04/02/epplus/index.html">
 <meta property="og:site_name" content="YJX的博客">
-<meta property="og:description" content="EPPlus的写入Excel功能简单运用和Build运行错误的解决方法 EPPlus 是使用Open Office XML格式（xlsx）读写Excel 2007 &#x2F; 2010文件的.net开发库。 官网文档：https:&#x2F;&#x2F;github.com&#x2F;JanKallman&#x2F;EPPlus EPPlus.dll下载地址：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;13Pn3zSLDL-kgVgUnn4">
+<meta property="og:description" content="Unity2018版本打包文件合并 Unity2018打包后文件一大堆，相对于以前打包后的两个文件来说，现在的打包文件不方便管理。在查找2018打包文件都有什么作用的时候发现一篇可以美化打包文件的文章，在这里给大家分享一下。（当然也可以用于其他版本的Build文件）。  这是使用Unity2018.3.2f1打包出来的项目：  在脚本中引用 12using OfficeOpenXml;using">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yjx-start.github.io/2021/04/02/epplus/%E5%AF%BC%E5%85%A5.png">
+<meta property="og:image" content="http://yjx-start.github.io/2021/04/02/epplus/1.jpg">
 <meta property="og:image" content="http://yjx-start.github.io/2021/04/02/epplus/%E5%BC%95%E7%94%A8.png">
 <meta property="og:image" content="http://yjx-start.github.io/2021/04/02/epplus/%E6%96%B9%E6%B3%95.png">
 <meta property="og:image" content="http://yjx-start.github.io/2021/04/02/epplus/%E5%AF%BC%E5%87%BA.png">
@@ -29,13 +29,13 @@
 <meta property="og:image" content="http://yjx-start.github.io/2021/04/02/epplus/%E6%96%87%E4%BB%B61.png">
 <meta property="og:image" content="http://yjx-start.github.io/2021/04/02/epplus/%E6%96%87%E4%BB%B62.png">
 <meta property="article:published_time" content="2021-04-02T12:30:39.935Z">
-<meta property="article:modified_time" content="2021-04-07T03:30:37.321Z">
+<meta property="article:modified_time" content="2021-04-25T07:25:00.556Z">
 <meta property="article:author" content="YJX">
-<meta property="article:tag" content="Unity Plugins">
+<meta property="article:tag" content="Unity Tips">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yjx-start.github.io/2021/04/02/epplus/%E5%AF%BC%E5%85%A5.png">
+<meta name="twitter:image" content="http://yjx-start.github.io/2021/04/02/epplus/1.jpg">
 
-  <meta name="keywords" content=",Unity Plugins">
+  <meta name="keywords" content=",Unity Tips">
   <meta name="format-detection" content="telephone=no,email=no">
   <meta name="theme-color" content="#9C27B0">
 
@@ -118,7 +118,7 @@
       </div>
       <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
         
-        <a class="mdui-ripple sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="mdui-ripple sidebar_archives-count">6</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2021/03/">三月 2021<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="mdui-ripple sidebar_archives-count">11</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2021/03/">三月 2021<span class="mdui-ripple sidebar_archives-count">1</span></a>
         
       </div>
     </div>
@@ -146,7 +146,7 @@
       </div>
       <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
         
-        <a class="mdui-ripple sidebar_archives-link" href="/tags/FAQ/" rel="tag">FAQ<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Hexo-Plugins/" rel="tag">Hexo Plugins<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Hololens/" rel="tag">Hololens<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/ILRuntime/" rel="tag">ILRuntime<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Unity-Plugins/" rel="tag">Unity Plugins<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/FAQ/" rel="tag">FAQ<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Hexo-Plugins/" rel="tag">Hexo Plugins<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Hololens/" rel="tag">Hololens<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/ILRuntime/" rel="tag">ILRuntime<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Unity-Tips/" rel="tag">Unity Tips<span class="mdui-ripple sidebar_archives-count">6</span></a>
         
       </div>
     </div>
@@ -190,10 +190,10 @@
   <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-17.png" style="max-height: 240px;">
+      <img src="/images/random/material-13.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
-          <div class="mdui-card-primary-title">EPPlus插件</div>
+          <div class="mdui-card-primary-title">Unity打包文件合并</div>
           <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2021-04-02 / <i class="iconfont">&#xe601;</i> YJX</div>
         </div>
       </div>
@@ -215,10 +215,10 @@
           <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
           <ul class="mdui-menu" id="share_menu">
             <li class="mdui-menu-item">
-              <a href="http://service.weibo.com/share/share.php?appkey=&title=EPPlus插件&url=http://yjx-start.github.io/2021/04/02/epplus/&pic=http://yjx-start.github.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+              <a href="http://service.weibo.com/share/share.php?appkey=&title=Unity打包文件合并&url=http://yjx-start.github.io/2021/04/02/epplus/&pic=http://yjx-start.github.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://twitter.com/intent/tweet?text=EPPlus插件&url=http://yjx-start.github.io/2021/04/02/epplus/&via=YJX" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+              <a href="https://twitter.com/intent/tweet?text=Unity打包文件合并&url=http://yjx-start.github.io/2021/04/02/epplus/&via=YJX" target="_blank" class="mdui-ripple">分享到 Twitter</a>
             </li>
             <li class="mdui-menu-item">
               <a href="https://www.facebook.com/sharer/sharer.php?u=http://yjx-start.github.io/2021/04/02/epplus/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
@@ -227,28 +227,24 @@
               <a href="https://plus.google.com/share?url=http://yjx-start.github.io/2021/04/02/epplus/" target="_blank" class="mdui-ripple">分享到 Google+</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yjx-start.github.io/2021/04/02/epplus/&title=EPPlus插件" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yjx-start.github.io/2021/04/02/epplus/&title=Unity打包文件合并" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="http://connect.qq.com/widget/shareqq/index.html?site=YJX的博客&title=EPPlus插件&pics=http://yjx-start.github.io/images/favicon.png&url=http://yjx-start.github.io/2021/04/02/epplus/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+              <a href="http://connect.qq.com/widget/shareqq/index.html?site=YJX的博客&title=Unity打包文件合并&pics=http://yjx-start.github.io/images/favicon.png&url=http://yjx-start.github.io/2021/04/02/epplus/" target="_blank" class="mdui-ripple">分享到 QQ</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://telegram.me/share/url?url=http://yjx-start.github.io/2021/04/02/epplus/&text=EPPlus插件" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+              <a href="https://telegram.me/share/url?url=http://yjx-start.github.io/2021/04/02/epplus/&text=Unity打包文件合并" target="_blank" class="mdui-ripple">分享到 Telegram</a>
             </li>
           </ul>
         
       </div>
     </header>
     <div class="mdui-card-content mdui-typo">
-      <h1 id="EPPlus的写入Excel功能简单运用和Build运行错误的解决方法">EPPlus的写入Excel功能简单运用和Build运行错误的解决方法<a class="header-anchor" href="#EPPlus的写入Excel功能简单运用和Build运行错误的解决方法" aria-hidden="true"></a></h1>
-<h3 id="EPPlus 是使用Open Office XML格式（xlsx）读写Excel 2007 / 2010文件的.net开发库。">EPPlus 是使用Open Office XML格式（xlsx）读写Excel 2007 / 2010文件的.net开发库。<a class="header-anchor" href="#EPPlus 是使用Open Office XML格式（xlsx）读写Excel 2007 / 2010文件的.net开发库。" aria-hidden="true"></a></h3>
-<h3 id="官网文档：https://github.com/JanKallman/EPPlus">官网文档：<a target="_blank" rel="noopener" href="https://github.com/JanKallman/EPPlus">https://github.com/JanKallman/EPPlus</a><a class="header-anchor" href="#官网文档：https://github.com/JanKallman/EPPlus" aria-hidden="true"></a></h3>
-<h3 id="EPPlus.dll下载地址：https://pan.baidu.com/s/13Pn3zSLDL-kgVgUnn4ZUPA">EPPlus.dll下载地址：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/13Pn3zSLDL-kgVgUnn4ZUPA">https://pan.baidu.com/s/13Pn3zSLDL-kgVgUnn4ZUPA</a><a class="header-anchor" href="#EPPlus.dll下载地址：https://pan.baidu.com/s/13Pn3zSLDL-kgVgUnn4ZUPA" aria-hidden="true"></a></h3>
-<h3 id="本案例使用unity版本：unity2018.3.2f1">本案例使用unity版本：unity2018.3.2f1<a class="header-anchor" href="#本案例使用unity版本：unity2018.3.2f1" aria-hidden="true"></a></h3>
-<h3 id="编程工具：VS2017">编程工具：VS2017<a class="header-anchor" href="#编程工具：VS2017" aria-hidden="true"></a></h3>
+      <h1 id="Unity2018版本打包文件合并">Unity2018版本打包文件合并<a class="header-anchor" href="#Unity2018版本打包文件合并" aria-hidden="true"></a></h1>
+<h3 id="Unity2018打包后文件一大堆，相对于以前打包后的两个文件来说，现在的打包文件不方便管理。在查找2018打包文件都有什么作用的时候发现一篇可以美化打包文件的文章，在这里给大家分享一下。（当然也可以用于其他版本的Build文件）。">Unity2018打包后文件一大堆，相对于以前打包后的两个文件来说，现在的打包文件不方便管理。在查找2018打包文件都有什么作用的时候发现一篇可以美化打包文件的文章，在这里给大家分享一下。（当然也可以用于其他版本的Build文件）。<a class="header-anchor" href="#Unity2018打包后文件一大堆，相对于以前打包后的两个文件来说，现在的打包文件不方便管理。在查找2018打包文件都有什么作用的时候发现一篇可以美化打包文件的文章，在这里给大家分享一下。（当然也可以用于其他版本的Build文件）。" aria-hidden="true"></a></h3>
 <hr>
-<h5 id="插件导入Plugins文件夹中">插件导入Plugins文件夹中<a class="header-anchor" href="#插件导入Plugins文件夹中" aria-hidden="true"></a></h5>
-<p><img src="/2021/04/02/epplus/%E5%AF%BC%E5%85%A5.png" alt></p>
+<h5 id="这是使用Unity2018.3.2f1打包出来的项目：">这是使用Unity2018.3.2f1打包出来的项目：<a class="header-anchor" href="#这是使用Unity2018.3.2f1打包出来的项目：" aria-hidden="true"></a></h5>
+<p><img src="/2021/04/02/epplus/1.jpg" alt></p>
 <h5 id="在脚本中引用">在脚本中引用<a class="header-anchor" href="#在脚本中引用" aria-hidden="true"></a></h5>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> OfficeOpenXml;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br></pre></td></tr></table></figure>
 <p><img src="/2021/04/02/epplus/%E5%BC%95%E7%94%A8.png" alt="引用"></p>
@@ -286,7 +282,7 @@
     <footer class="mdui-card-actions">
       
       
-        <a class="mdui-ripple article_tags-link" href="/tags/Unity-Plugins/" rel="tag">Unity Plugins</a>
+        <a class="mdui-ripple article_tags-link" href="/tags/Unity-Tips/" rel="tag">Unity Tips</a>
       
     </footer>
     
