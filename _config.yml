@@ -109,6 +109,9 @@ theme: default
 deploy:
   type: git
   repository: git@github.com:yjx-start/yjx-start.github.io.git
+   # git@github.com:yjx-start/yjx-start.github.io.git
+    
+    
   branch: main
 
 # Markdown

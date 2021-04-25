@@ -1,17 +1,13 @@
 ---
-uuid: ca7f0092-49f6-0f78-b48d-badbaf7a963e
-title: EPPlus插件
-tags: Unity Plugins
+uuid: 5ebf15cc-18fb-415a-7b65-50fbff98a857
+title: Unity打包文件合并
+tags: Unity Tips
 ---
-# EPPlus的写入Excel功能简单运用和Build运行错误的解决方法
-### EPPlus 是使用Open Office XML格式（xlsx）读写Excel 2007 / 2010文件的.net开发库。
-### 官网文档：https://github.com/JanKallman/EPPlus
-### EPPlus.dll下载地址：https://pan.baidu.com/s/13Pn3zSLDL-kgVgUnn4ZUPA
-### 本案例使用unity版本：unity2018.3.2f1
-### 编程工具：VS2017
+# Unity2018版本打包文件合并
+### Unity2018打包后文件一大堆，相对于以前打包后的两个文件来说，现在的打包文件不方便管理。在查找2018打包文件都有什么作用的时候发现一篇可以美化打包文件的文章，在这里给大家分享一下。（当然也可以用于其他版本的Build文件）。
 ---
-##### 插件导入Plugins文件夹中
-![](导入.png)
+##### 这是使用Unity2018.3.2f1打包出来的项目：
+![](1.jpg)
 ##### 在脚本中引用
 ``` C#
 using OfficeOpenXml;
